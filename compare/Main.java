@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.util.*;
 
@@ -28,7 +27,7 @@ public class Main implements Comparator<String> {
 			return 0;
 		}
 
-		if (o1.length() < o2. length()) {
+		if (o1.length() < o2.length()) {
 			if (o2.charAt(len) == '-' || o2.charAt(len) == '.') {
 				return 1;
 			}
@@ -48,9 +47,6 @@ public class Main implements Comparator<String> {
 	public static void main(String[] args) throws Exception {
 		String fileName = args[0];
 		copy(fileName);
-		// sort(fileName);
-
-		// fillProperties("core_zh.properties", "dest/core.properties", "src/core_zh0.properties");
 	}
 
 	public static void copy(String fileName) throws Exception {
@@ -70,8 +66,8 @@ public class Main implements Comparator<String> {
 			if (isMultipleLine) {
 				buff.append("\n");
 			} else {
-				buff.append(array[0])
-					.append("\n");
+				buff.append(array[0].trim())
+						.append("\n");
 			}
 			isMultipleLine = line.trim().endsWith("\\");
 			//if (isMultipleLine) {
@@ -177,7 +173,7 @@ public class Main implements Comparator<String> {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(templateFile)));
 		PrintWriter writer = new PrintWriter(new OutputStreamWriter(new FileOutputStream(targetFile)));
 		String line = null;
-		
+
 		while ((line = reader.readLine()) != null) {
 			if (line.trim().length() == 0) {
 				writer.println("");
@@ -201,9 +197,9 @@ public class Main implements Comparator<String> {
 		File sourceFile = new File(sourceFileName);
 		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(sourceFile), "UTF-8"));
 		String line = null;
-		
+
 		Properties prop = new Properties();
-		
+
 		while ((line = reader.readLine()) != null) {
 			if (line.trim().length() == 0) {
 				continue;
