@@ -1,4 +1,5 @@
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class Main implements Comparator<String> {
@@ -7,7 +8,7 @@ public class Main implements Comparator<String> {
 		o1 = o1.toLowerCase();
 		o2 = o2.toLowerCase();
 		// System.out.println(o1 + " " + o2);
-		int len = o1.length() < o2.length() ? o1.length() : o2.length();
+		int len = Math.min(o1.length(), o2.length());
 		// return o1.compareTo(o2);
 		for (int i = 0; i < len; i++) {
 			char c1 = o1.charAt(i);
@@ -52,16 +53,15 @@ public class Main implements Comparator<String> {
 	public static void copy(String fileName) throws Exception {
 		File file = new File("src", fileName);
 
-		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
-		StringBuffer buff = new StringBuffer();
+		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
+		StringBuilder buff = new StringBuilder();
 		String line = null;
 
 		boolean isMultipleLine = false;
 		int index = 1;
 
 		while ((line = in.readLine()) != null) {
-			String originLine = line;
-			// System.out.println(line);
+            // System.out.println(line);
 			String[] array = line.split("=");
 			if (isMultipleLine) {
 				buff.append("\n");
@@ -90,7 +90,7 @@ public class Main implements Comparator<String> {
 	public static void sort(String fileName) throws Exception {
 		File file = new File("src", fileName);
 
-		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
+		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
 		// StringBuffer buff = new StringBuffer();
 		String line = null;
 
@@ -100,20 +100,19 @@ public class Main implements Comparator<String> {
 		Map<String, String> map = new TreeMap<String, String>(new Main());
 
 		String key = "";
-		String value = "";
+		StringBuilder value = new StringBuilder();
 
 		while ((line = in.readLine()) != null) {
 			if (line.startsWith("#")) {
 				// comment
 				continue;
 			}
-			if ("".equals(line.trim())) {
+			if (line.trim().isEmpty()) {
 				// blank
 				continue;
 			}
 
-			String originLine = line;
-			// System.out.println(line);
+            // System.out.println(line);
 			int indexPart = line.indexOf("=");
 			String firstPart;
 			String secondPart;
@@ -133,19 +132,19 @@ public class Main implements Comparator<String> {
 			// String[] array = line.split("=");
 			if (isMultipleLine) {
 				// buff.append("\n");
-				value += firstPart + "\n";
+				value.append(firstPart).append("\n");
 			} else {
 				// buff.append(array[0])
 				//	.append("\n");
 				key = firstPart;
-				value += secondPart + "\n";
+				value.append(secondPart).append("\n");
 			}
 			isMultipleLine = line.trim().endsWith("\\");
 			if (!isMultipleLine) {
 				// System.out.println(key + " " + value);
-				map.put(key, value);
+				map.put(key, value.toString());
 				key = "";
-				value = "";
+				value = new StringBuilder();
 			}
 			index++;
 		}
@@ -155,7 +154,7 @@ public class Main implements Comparator<String> {
 
 		File outputFile = new File("dest", fileName);
 		FileOutputStream fos = new FileOutputStream(outputFile);
-		PrintWriter writer = new PrintWriter(new OutputStreamWriter(fos, "UTF-8"));
+		PrintWriter writer = new PrintWriter(new OutputStreamWriter(fos, StandardCharsets.UTF_8));
 		// fos.write(buff.toString().getBytes("UTF-8"));
 		for (Map.Entry<String, String> entry : map.entrySet()) {
 			writer.print(entry.getKey() + "=" + entry.getValue());
@@ -175,7 +174,7 @@ public class Main implements Comparator<String> {
 		String line = null;
 
 		while ((line = reader.readLine()) != null) {
-			if (line.trim().length() == 0) {
+			if (line.trim().isEmpty()) {
 				writer.println("");
 				continue;
 			}
@@ -195,13 +194,13 @@ public class Main implements Comparator<String> {
 
 	static Properties readProperties(String sourceFileName) throws Exception {
 		File sourceFile = new File(sourceFileName);
-		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(sourceFile), "UTF-8"));
+		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(sourceFile), StandardCharsets.UTF_8));
 		String line = null;
 
 		Properties prop = new Properties();
 
 		while ((line = reader.readLine()) != null) {
-			if (line.trim().length() == 0) {
+			if (line.trim().isEmpty()) {
 				continue;
 			}
 			if (line.startsWith("#")) {

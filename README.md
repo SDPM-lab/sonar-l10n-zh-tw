@@ -1,7 +1,7 @@
 The Traditional Chinese Language Pack for SonarQube
 =======
 
-Author: yzy-eddy <a0970115177@gmail.com>
+Author: JeffreyChen <jechenmailman@gmail.com>
 
 Latest version: https://github.com/SEPMLAB/sonar-l10n-zh-tw/releases/latest
 
