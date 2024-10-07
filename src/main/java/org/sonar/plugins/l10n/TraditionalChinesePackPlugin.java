@@ -1,6 +1,7 @@
 /*
  * Traditional Chinese Language Pack
  * Copyright (C) 2022 yzy-eddy
+ * Copyright (C) 2024 JeffreyChen
  * dev@sonar.codehaus.org
  *
  * This program is free software; you can redistribute it and/or
@@ -19,14 +20,19 @@
  */
 package org.sonar.plugins.l10n;
 
-import org.sonar.api.SonarPlugin;
+import org.sonar.api.Plugin;
 
 import java.util.Collections;
-import java.util.List;
 
-public final class TraditionalChinesePackPlugin extends SonarPlugin {
+public final class TraditionalChinesePackPlugin implements Plugin {
 
-  public List getExtensions() {
-    return Collections.emptyList();
-  }
+    @Override
+    public String toString() {
+        return getClass().getSimpleName();
+    }
+
+    @Override
+    public void define(Context context) {
+        context.addExtensions(Collections.emptyList());
+    }
 }
