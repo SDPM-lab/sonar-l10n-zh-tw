@@ -22,7 +22,7 @@ public class TraditionalChinesePackPluginTest {
 
     // coverage
     @Test
-    public void testChinesePackPlugin() {
+    public void testTraditionalChinesePackPlugin() {
         TraditionalChinesePackPlugin traditionalChinesePackPlugin = new TraditionalChinesePackPlugin();
 
         String pluginName = traditionalChinesePackPlugin.toString();
