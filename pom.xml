@@ -115,13 +115,11 @@
                 <version>1.18.0.372</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <basePlugin>l10nen</basePlugin>
                     <pluginName>TraditionalChinese Pack</pluginName>
                     <pluginDescription>Language pack for TraditionalChinese</pluginDescription>
                 </configuration>
             </plugin>
-
-
+            
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>native2ascii-maven-plugin</artifactId>
