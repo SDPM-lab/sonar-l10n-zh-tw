@@ -1,111 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.sonarqube.l10n.zh-tw</groupId>
-  <artifactId>sonar-l10n-zh-tw-plugin</artifactId>
-  <packaging>sonar-plugin</packaging>
-  <version>1.0</version>
+<project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+>
 
-  <name>Traditional Chinese Language Pack</name>
-  <url>https://github.com/SonarQubeCommunity/sonar-l10n-zhtw</url>
-  <inceptionYear>2022</inceptionYear>
-  <description>SonarQube Traditional Chinese Language Pack (not compatible with the “Chinese Pack” which uses Simplified Chinese)</description>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.sonarqube.l10n.zh-tw</groupId>
+    <artifactId>sonar-l10n-zh-tw-plugin</artifactId>
+    <packaging>sonar-plugin</packaging>
+    <version>1.1</version>
 
-  <organization>
-    <name>yzy-eddy</name>
-    <url>https://github.com/SonarQubeCommunity/sonar-l10n-zhtw</url>
-  </organization>
+    <name>Traditional Chinese Language Pack</name>
+    <url>https://github.com/JE-Chen/sonar-l10n-zh-tw</url>
+    <inceptionYear>2024</inceptionYear>
+    <description>SonarQube Traditional Chinese Language Pack (not compatible with the “Chinese Pack” which uses
+        Simplified Chinese)
+    </description>
 
-  <licenses>
-    <license>
-      <name>GNU LGPL 3</name>
-      <url>http://www.gnu.org/licenses/lgpl.txt</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
+    <organization>
+        <name>JE-Chen</name>
+        <url>https://github.com/JE-Chen/sonar-l10n-zh-tw</url>
+    </organization>
 
-  <scm>
-    <connection>scm:git:https://github.com/SonarQubeCommunity/sonar-l10n-zh-tw.git</connection>
-    <developerConnection>scm:git:https://github.com/SonarQubeCommunity/sonar-l10n-zh-tw.git</developerConnection>
-    <url>https://github.com/SonarQubeCommunity/sonar-l10n-zh-tw</url>
-    <tag>HEAD</tag>
-  </scm>
+    <licenses>
+        <license>
+            <name>GNU LGPL 3</name>
+            <url>http://www.gnu.org/licenses/lgpl.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-  <issueManagement>
-    <system>GitHub Issues</system>
-    <url>https://github.com/SonarQubeCommunity/sonar-l10n-zh-tw/issues</url>
-  </issueManagement>
+    <scm>
+        <connection>scm:git:https://github.com/JE-Chen/sonar-l10n-zh-tw.git</connection>
+        <developerConnection>scm:git:https://github.com/JE-Chen/sonar-l10n-zh-tw.git</developerConnection>
+        <url>https://github.com/JE-Chen/sonar-l10n-zh-tw</url>
+        <tag>HEAD</tag>
+    </scm>
 
-  <properties>
-    <sonar.pluginClass>org.sonar.plugins.l10n.TraditionalChinesePackPlugin</sonar.pluginClass>
-    <sonar.version>9.2.0.49834</sonar.version>
-    <junit.version>4.13.2</junit.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <sonar.projectKey>Traditional Chinese Language Pack</sonar.projectKey>
-    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-  </properties>
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/JE-Chen/sonar-l10n-zh-tw/issues</url>
+    </issueManagement>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.sonarsource.sonarqube</groupId>
-      <artifactId>sonar-plugin-api</artifactId>
-      <version>${sonar.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.sonarsource.sonarqube</groupId>
-      <artifactId>sonar-testing-harness</artifactId>
-      <version>${sonar.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.sonarsource.sonarqube</groupId>
-      <artifactId>sonar-core</artifactId>
-      <version>${sonar.version}</version>
-      <scope>test</scope>
-    </dependency>
+    <properties>
+        <sonar.pluginClass>org.sonar.plugins.l10n.TraditionalChinesePackPlugin</sonar.pluginClass>
+        <sonar.version>10.6.0.92116</sonar.version>
+        <sonar-plugin-api.version>9.8.0.203</sonar-plugin-api.version>
+        <junit.version>4.13.2</junit.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <sonar.projectKey>Traditional Chinese Language Pack</sonar.projectKey>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <maven.compiler.source>23</maven.compiler.source>
+        <maven.compiler.target>23</maven.compiler.target>
+    </properties>
 
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
-    </dependency>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.13.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>3.1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-install-plugin</artifactId>
+            <version>3.1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.sonarsource.api.plugin</groupId>
+            <artifactId>sonar-plugin-api</artifactId>
+            <version>${sonar-plugin-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.sonarsource.sonarqube</groupId>
+            <artifactId>sonar-testing-harness</artifactId>
+            <version>${sonar.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.sonarsource.sonarqube</groupId>
+            <artifactId>sonar-core</artifactId>
+            <version>${sonar.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-  </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
+                <artifactId>sonar-packaging-maven-plugin</artifactId>
+                <version>1.18.0.372</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <basePlugin>l10nen</basePlugin>
+                    <pluginName>TraditionalChinese Pack</pluginName>
+                    <pluginDescription>Language pack for TraditionalChinese</pluginDescription>
+                </configuration>
+            </plugin>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
-        <artifactId>sonar-packaging-maven-plugin</artifactId>
-        <version>1.18.0.372</version>
-        <extensions>true</extensions>
-        <configuration>
-          <basePlugin>l10nen</basePlugin>
-          <pluginName>TraditionalChinese Pack</pluginName>
-          <pluginDescription>Language pack for TraditionalChinese</pluginDescription>
-        </configuration>
-      </plugin>
 
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>native2ascii-maven-plugin</artifactId>
-        <version>1.0-beta-1</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>native2ascii</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>native2ascii-maven-plugin</artifactId>
+                <version>1.0-beta-1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>native2ascii</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.8.6</version>
-      </plugin>
-    </plugins>
-  </build>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.12</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Nexus Release Repository</name>
+            <url>file:./target/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>file:./target/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <profiles>
+        <profile>
+            <id>coverage</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>prepare-agent</id>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>report</id>
+                                <goals>
+                                    <goal>report</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
 </project>
