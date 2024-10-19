@@ -51,8 +51,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sonar.projectKey>Traditional Chinese Language Pack</sonar.projectKey>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -115,12 +113,10 @@
                 <version>1.18.0.372</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <basePlugin>l10nen</basePlugin>
                     <pluginName>TraditionalChinese Pack</pluginName>
                     <pluginDescription>Language pack for TraditionalChinese</pluginDescription>
                 </configuration>
             </plugin>
-
 
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
