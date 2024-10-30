@@ -15,6 +15,6 @@ SonarQube 繁體中文套件(Traditional Chinese Language Pack)
 
 Compatibility Matrix:
 
- **SonarQube**       | **9.2** | **10.7** | | | | | | | | |
+ **SonarQube**       | **9.2** | **10.0~10.7** | | | | | | | | |
 ---------------------|---------|----------|-|-|-|-|-|-|-|-|
  **sonar-l10n-zhtw** | **1.0** | **1.1**  | | | | | | | | |
