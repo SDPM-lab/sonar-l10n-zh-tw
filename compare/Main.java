@@ -53,7 +53,7 @@ public class Main implements Comparator<String> {
 	public static void copy(String fileName) throws Exception {
 		File file = new File("src", fileName);
 
-		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
+		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
 		StringBuilder buff = new StringBuilder();
 		String line = null;
 
@@ -90,7 +90,7 @@ public class Main implements Comparator<String> {
 	public static void sort(String fileName) throws Exception {
 		File file = new File("src", fileName);
 
-		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
+		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
 		// StringBuffer buff = new StringBuffer();
 		String line = null;
 
@@ -150,11 +150,11 @@ public class Main implements Comparator<String> {
 		}
 		in.close();
 
-		// System.out.println(map);
+		System.out.println(map);
 
 		File outputFile = new File("dest", fileName);
 		FileOutputStream fos = new FileOutputStream(outputFile);
-		PrintWriter writer = new PrintWriter(new OutputStreamWriter(fos, StandardCharsets.UTF_8));
+		PrintWriter writer = new PrintWriter(new OutputStreamWriter(fos, "UTF-8"));
 		// fos.write(buff.toString().getBytes("UTF-8"));
 		for (Map.Entry<String, String> entry : map.entrySet()) {
 			writer.print(entry.getKey() + "=" + entry.getValue());
@@ -193,8 +193,8 @@ public class Main implements Comparator<String> {
 	}
 
 	static Properties readProperties(String sourceFileName) throws Exception {
-		File sourceFile = new File(sourceFileName);
-		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(sourceFile), StandardCharsets.UTF_8));
+		File sourceFile = new File("src", sourceFileName);
+		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(sourceFile), "UTF-8"));
 		String line = null;
 
 		Properties prop = new Properties();
@@ -214,6 +214,7 @@ public class Main implements Comparator<String> {
 			String key = array[0];
 			String value = array[1];
 			prop.setProperty(key, value);
+			System.out.println(key + "=" + value);
 		}
 		return prop;
 	}
