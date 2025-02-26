@@ -3,7 +3,7 @@ The Traditional Chinese Language Pack for SonarQube
 
 Author: JeffreyChen <jechenmailman@gmail.com>
 
-Latest version: https://github.com/JE-Chen/sonar-l10n-zh-tw/releases
+Latest version: https://github.com/JE-Chen/sonar-l10n-zh-tw/releases/tag/1.1
 
 Sonarcloud: https://sonarcloud.io/project/overview?id=JE-Chen_sonar-l10n-zh-tw
 
