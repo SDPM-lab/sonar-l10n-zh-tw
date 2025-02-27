@@ -4,12 +4,12 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
 >
-
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>org.sonarqube.l10n.zh-tw</groupId>
     <artifactId>sonar-l10n-zh-tw-plugin</artifactId>
     <packaging>sonar-plugin</packaging>
-    <version>1.1</version>
+    <version>1.2</version>
 
     <name>Traditional Chinese Language Pack</name>
     <url>https://github.com/JE-Chen/sonar-l10n-zh-tw</url>
@@ -35,7 +35,7 @@
         <connection>scm:git:https://github.com/JE-Chen/sonar-l10n-zh-tw.git</connection>
         <developerConnection>scm:git:https://github.com/JE-Chen/sonar-l10n-zh-tw.git</developerConnection>
         <url>https://github.com/JE-Chen/sonar-l10n-zh-tw</url>
-        <tag>HEAD</tag>
+        <tag>sonar-l10n-zh-tw-1.2</tag>
     </scm>
 
     <issueManagement>
@@ -45,14 +45,17 @@
 
     <properties>
         <sonar.pluginClass>org.sonar.plugins.l10n.TraditionalChinesePackPlugin</sonar.pluginClass>
-        <sonar.version>10.6.0.92116</sonar.version>
-        <sonar-plugin-api.version>10.7.0.2191</sonar-plugin-api.version>
+        <sonar.version>25.2.0.102705</sonar.version>
+        <sonar-plugin-api.version>9.8.0.203</sonar-plugin-api.version>
         <junit.version>4.13.2</junit.version>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
         <sonar.projectKey>Traditional Chinese Language Pack</sonar.projectKey>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
+
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -62,17 +65,25 @@
             <version>${sonar-plugin-api.version}</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>org.sonarsource.sonarqube</groupId>
             <artifactId>sonar-testing-harness</artifactId>
             <version>${sonar.version}</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.sonarsource.sonarqube</groupId>
             <artifactId>sonar-core</artifactId>
             <version>${sonar.version}</version>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.sonarsource.sonarqube</groupId>
+                    <artifactId>sonar-sarif</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -81,7 +92,6 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -92,7 +102,6 @@
                 <version>1.18.0.372</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <basePlugin>l10nen</basePlugin>
                     <pluginName>TraditionalChinese Pack</pluginName>
                     <pluginDescription>Language pack for TraditionalChinese</pluginDescription>
                 </configuration>
@@ -114,8 +123,53 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.6</version>
+                <version>0.8.12</version>
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Nexus Release Repository</name>
+            <url>file:./target/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>file:./target/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <profiles>
+        <profile>
+            <id>coverage</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>prepare-agent</id>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>report</id>
+                                <goals>
+                                    <goal>report</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
 </project>
