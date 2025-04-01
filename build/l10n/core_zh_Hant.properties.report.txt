@@ -1,22 +1,0 @@
-
-=======================
-'core_zh_Hant.properties' is not up-to-date.
-
- Missing translations are:
-overview.badges.copy_snippet=Copy the snippet for your selected badge
-overview.metric_not_computed=Not computed
-overview.quality_gates.conditions.condition_simplification_tour.content=<p>One single condition in <link>{qualityGateName} quality gate</link> ensures that new code has no issues.</p><p>Every issue in new code must be resolved for a project to pass this quality gate.</p>
-severity_impact.help.description=<p1>Severities are now directly tied to the software quality impacted. This means that one software quality impacted has one severity.</p1><p>They can be changed with sufficient permissions.</p>
-severity_impact.help.link=Learn more about severity and software qualities
-tours=Tours
-
-The following translations do not exist in the reference bundle:
-Overview.quality_gates.conditions.condition_simplification_tour.content=<p><link>{qualityGateName} åè³ªé</link>ä¸­çå®ä¸æ¢ä»¶ç¢ºä¿æ°ç¨å¼ç¢¼æ²æåé¡ã
-harshness_impact.help.description=<p1>å´éç¨åº¦ç¾å¨èåå½±é¿çè»é«åè³ªç´æ¥ç¸éãéæå³èåå½±é¿çä¸åè»é«åè³ªå·æä¸ç¨®å´éç¨åº¦ã
-perspective.badges.copy_snippet=è¤è£½æ¨æé¸å¾½ç« ççæ®µ
-perspective.metric_not_computed=æªè¨ç®
-serious_impact.help.link=äºè§£æéå´éæ§åè»é«åè³ªçæ´å¤ä¿¡æ¯
-æé=æé
-
-See report file located at: C:\CodeWorkspace\Java\sonar-l10n-zh-tw\build\l10n\core_zh_Hant.properties.report.txt
-=======================
