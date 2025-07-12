@@ -1,0 +1,70 @@
+
+=======================
+'core_zh_Hant.properties' is not up-to-date.
+
+ Missing translations are:
+ai_generated_code.autodetect=Autodetect AI-Generated Code
+ai_generated_code.autodetect.description=Select this option to allow SonarQube Server to <link>autodetect AI-generated code</link> in this project. This feature currently supports organizations using GitHub and GitHub Copilot, and relies on the âGitHub Copilot Businessâ Organization permission from the GitHub App.
+ai_generated_code.autodetect.detected_code=This project may contain AI-generated code. Some contributors in this project used GitHub Copilot recently. We recommend that you activate "Contains AI-generated code" below to benefit from Sonar's AI Code Assurance.
+ai_generated_code.autodetect.label=Autodetect AI-generated code in this project
+ai_generated_code.autodetect.success_message=Autodetect AI-generated has been successfully updated.
+ai_generated_code.autodetect.turned_off_globally=This setting is turned off globally for this SonarQube Server instance. It cannot be turned on for this project.
+ai_generated_code.contains_code.title=Contains AI-Generated Code
+ai_generated_code.review_profiles.button=Review Quality Profiles
+ai_generated_code.review_profiles.description=Sonar way is the recommended quality profile for AI generated code. Although it is not a mandatory step, we suggest you review your quality profiles to ensure protection.
+ai_generated_code.review_profiles.link=Learn why in the documentation
+ai_generated_code.review_profiles.title=Review this projectâs quality profiles
+ai_generated_code.review_profiles.title.aica_on=AI Code Assurance is on. Consider reviewing this projectâs quality profiles.
+architecture.discovery.description=Discover the structure of your project.
+architecture.oversized.description=Components containing too many child items.
+architecture.page.dashboard.open_graph=Open Graph
+architecture.page.discovery=Discovery
+architecture.page.oversized=Oversized components
+architecture.page.tangle=Tangle Details
+architecture.page.tangles=Tangles
+architecture.page.tangles.count={count} Tangles
+architecture.tangles.description=Tangles found in this branch.
+dependencies.package_managers.COMPOSER=Packagist
+dependencies.properties.project=Project
+dependencies.risk.what.basicInfo.no_severity=Unscored
+dependencies.risk.what.basicInfo.withdrawnAt=Report withdrawn {date}
+dependencies.risks.cvss_withdrawn=CVSS: N/A (withdrawn)
+email_notification.form.auth_type=Authentication type
+issues.x_data_and_execution_flows={dataFlowsCount, plural, one {{dataFlows} data flow} other {{dataFlows} data flows}} and {executionFlowsCount, plural, one {{executionFlows} execution flow} other {{executionFlows} execution flows}}
+issues.x_data_flows={flowsCount, plural, one {{flows} data flow} other {{flows} data flows}}
+issues.x_execution_flows={flowsCount, plural, one {{flows} execution flow} other {{flows} execution flows}}
+issues.x_locations={locationsCount, plural, one {{locations} location} other {{locations} locations}}
+my_profile.per_project_notifications.filter=Filter projects
+onboarding.analysis.python.execute.header=Execute the Scanner
+onboarding.analysis.python.execute.text=Running a SonarQube analysis with the Scanner for Python projects is straightforward. You just need to run the following command in your project's folder.
+onboarding.analysis.python.install.header=Install the Scanner for Python projects
+onboarding.analysis.python.links.documentation=official documentation of the Scanner for Python projects
+onboarding.analysis.python.step.footer=Please visit the {link} for more details.
+onboarding.build.python=Python
+onboarding.create_project.azure.subtitle.reset_pat=Reset your Azure DevOps personal access token
+onboarding.create_project.bitbucket.subtitle.reset_pat=Reset your Bitbucket Server personal access token
+onboarding.create_project.bitbucketcloud.subtitle.reset_pat=Reset your Bitbucket Cloud app password
+onboarding.create_project.gitlab.subtitle.reset_pat=Reset your GitLab personal access token
+onboarding.tutorial.with.gitlab_ci.project_key.python.step2=Create a {file} file in your repository and paste the following code:
+overview.badges.measure=Metric
+overview.badges.type=Badge type
+project_navigation.binding_status.bind=Bind project
+project_navigation.binding_status.bind.tooltip=Enable automatic analysis, automatically configured PR decoration and privacy settings based on your DevOps platform by binding your project
+project_navigation.binding_status.bound_to_x=Bound to {dop}
+project_navigation.binding_status.not_bound=Not bound
+project_navigation.binding_status.not_bound.tooltip=To enable automatic analysis, automatically configured PR decoration and privacy settings based on your DevOps platform, ask your admin to bind this project
+project_quality_profile.contains_ai_code.description=Sonar way is the recommended quality profile for AI generated code. Although it is not a mandatory step, we suggest you review your quality profiles to ensure protection. <p>Learn why in our documentation</p>
+project_quality_profile.contains_ai_code.title=This project contains AI-generated code
+project_quality_profile.page=Quality Profiles
+project_quality_profile.page.description=Each language is automatically assigned the default quality profile of this instance. As a project administrator, you can override the default assignment and choose different profiles for languages used in this project.
+project_quality_profile.profiles_by_languages=Profiles by languages
+project_quality_profile.profiles_by_languages.description=For each language, choose the profile associated with this project.
+property.sca.admin.rescan.description=Branches can be rescanned for new vulnerabilities
+property.sca.admin.rescan.title=Configure branch rescanning
+quality_gates.conditions.error_message.default=Value is invalid
+quality_gates.conditions.error_message.percent=Value must be between 0 and 100
+quality_profiles.aica.tooltip.icon=This quality profile is recommended for AI-generated code
+quality_profiles.built_in.aica_description=This is a built-in quality profile that might be updated automatically. <aica>We recommend using Sonar way for projects that contain AI-generated code, as a strict standard is needed to ensure safety of such code.</aica> <link>Learn why in our documentation</link>
+
+See report file located at: C:\CodeWorkspace\Java\sonar-l10n-zh-tw\build\l10n\core_zh_Hant.properties.report.txt
+=======================
