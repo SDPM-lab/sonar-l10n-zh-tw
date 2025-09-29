@@ -3,22 +3,61 @@
 'core_zh_Hant.properties' is not up-to-date.
 
  Missing translations are:
-ai_generated_code.description=<p>Select this option if your project contains AI-generated code.</p><p>This is the first step to obtain Sonarâs <link>AI Code Assurance</link>.</p>
-issues.facet.impactSoftwareQualities.help.description=<p1>Security is the protection of your software from unauthorized access, use, or destruction.</p1><p>Reliability is a measure of how your software is capable of maintaining its level of performance under stated conditions for a stated period of time.</p><p>Maintainability refers to the ease with which you can repair, improve and understand software code.</p>
-issues.facet.issueStatuses.help.description=<p1>Issue Resolution and Issue Status were merged and there are now five possible statuses in the issue lifecycle.</p1><p>Won't Fix was replaced with Accept. Marking issues as Confirmed and Fixed was deprecated.</p>
-mode_tour.step1.description=<p1>We have introduced two modes - <b>Standard Experience</b> and <b>Multi-Quality Rule (MQR) Mode</b> - to empower you and your team to either continue using familiar workflows or explore new concepts.</p1><p>Take this tour to see what the difference is between them.</p>
-mode_tour.step2.description=<p1>The Standard Experience encompasses the use of rule types such as <b>Vulnerabilities</b>, <b>Bugs</b>, and <b>Code Smells</b>. Each rule has a single type and severity level, which you can customize with appropriate permissions.</p1><p>This approach focuses on assigning severity to a rule based on the single software quality (e.g., Security, Reliability, or Maintainability) on which it has the most significant impact.</p>
-mode_tour.step3.description=<p1>The new Multi-Quality Rule Mode aims to more accurately represent an issue's impact on all software qualities.Â </p1><p>It does this by assigning a separate severity to a rule for each software quality (Security, Reliability, and Maintainability), which replaces the types (Vulnerabilities, Bugs, and Code Smells). You can customize the severity level with appropriate permissions.</p><p>This approach focuses on ensuring the impact on all software qualities is clear, not just the one most severely impacted.</p>
-mode_tour.step4.description=<p1>You are currently in <b>{mode}</b>.</p1><p>It can be changed with sufficient permissions by going to Administration > Configuration > General Settings > Mode.</p><p>Your instance will start in the mode that most closely resembles the software version you are upgrading from.</p>
-overview.quality_gates.conditions.condition_simplification_tour.content=<p>One single condition in <link>{qualityGateName} quality gate</link> ensures that new code has no issues.</p><p>Every issue in new code must be resolved for a project to pass this quality gate.</p>
-project_quality_gate.ai_generated_code_not_protected.description=<p>This project contains AI-generated code. We recommend using a qualified quality gate to enable <link>AI Code Assurance</link>.</p><p>You may use <linkSonarWay>Sonar way for AI code</linkSonarWay> or <linkQualifyDoc>qualify your own custom quality gates for AI Code Assurance</linkQualifyDoc>.</p>
-project_quality_gate.ai_generated_code_protected.description=<p>This project contains AI-generated code and the selected quality gate is qualified for <link>AI Code Assurance</link>.</p>
-project_quality_profile.contains_ai_code.description=Sonar way is the recommended quality profile for AI generated code. Although it is not a mandatory step, we suggest you review your quality profiles to ensure protection. <p>Learn why in our documentation</p>
-property.sonar.autodetect.ai.code.confirmation={value, select, true {<p1>âAutodetect AI-generated codeâ will be turned on for all projects.</p1><p>This setting can be turned off by project administrators at the project level to prevent the autodetection of AI-generated code in specific projects.</p>} other {<p1>âAutodetect AI-generated codeâ will be turned off for all projects.</p1><p>Project administrators will no longer be able to activate this setting at the project level.</p>}}
-quality_gates.cayc.condition_simplification_tour.page_2.content=<p>One single condition ensures that new code has no issues.</p> <p>This condition replaced the three conditions on Security rating, Reliability rating and Maintainability rating.</p>
-settings.early_access.misra.dialog_description.disable=All new MISRA C++2023 rules will be removed from the quality profiles, and all related detected issues will be closed. As long as the early access to this feature is available, you can enable it again. <p>Are you sure you want to continue?</p>
-settings.early_access.misra.dialog_description.enable=A preview of additional MISRA C++2023 rules will be available for this instance. <p>Sonar may stop the trial at any time. When it stops, the MISRA Compliance early access features will be deactivated, all new MISRA C++2023 rules will be removed from the quality profiles, and all related detected issues will be closed.</p> Your organization will not be charged.
-severity_impact.help.description=<p1>Severities are now directly tied to the software quality impacted. This means that one software quality impacted has one severity.</p1><p>They can be changed with sufficient permissions.</p>
+architecture.discovery.spotlight.direct=Direct
+architecture.discovery.spotlight.incoming_dependencies={count, plural, one {1 incoming dependency} other {{count} incoming dependencies}}
+architecture.discovery.spotlight.no_incoming_dependencies=No incoming dependencies
+architecture.discovery.spotlight.no_outgoing_dependencies=No outgoing dependencies
+architecture.discovery.spotlight.outgoing_dependencies={count, plural, one {1 outgoing dependency} other {{count} outgoing dependencies}}
+architecture.discovery.spotlight.parent_no_dependencies_message=Select a child item on the graph to see its dependencies.
+architecture.discovery.spotlight.transitive=Transitive
+architecture.discovery.spotlight.weight={weight, plural, one {1 underlying dependency} other {{weight} underlying dependencies}}
+architecture.oversize.description=Components containing too many child items.
+architecture.page.dashboard.model.description=You can define your architecture model as code below.
+architecture.page.dashboard.open_model=Open model builder
+architecture.page.dashboard.open_model_visual=Open model builder (visual)
+architecture.page.model=Model
+architecture.page.model.description=Visualize your codebase and start formalizing your software architecture.
+architecture.page.model.docs=Review the <link1>expected format</link1> or take a look at the <link2>documentation</link2> to learn more.
+architecture.page.model.duplicate_connection=A connection between "{source}" and "{target}" already exists
+architecture.page.model.invalid_groups=Invalid {groupsCount, plural, one {group} other {groups}}: {groups}
+architecture.page.model.invalid_json=Invalid JSON format
+architecture.page.model.label=Model
+architecture.page.model.no_data=No model data
+architecture.page.model.same_source_and_target=A group cannot be connected to itself
+architecture.page.model.saved=Model saved successfully
+architecture.page.model.subtitle=Define your architecture model as code
+architecture.page.model.title=Architecture model
+architecture.page.model.visual.new_group=New Group
+architecture.page.model.visual.save_close=Save & Close
+architecture.page.model.visual.sidebar.description=Drag nodes to create groups in the model
+architecture.page.model.visual.sidebar.title=Source Nodes
+architecture.page.model.visual.title=Editing Model
+architecture.page.oversize=Oversized components
+architecture.page.oversize_list=Oversized components
+architecture.page.oversize_list.child_count={count, plural, one {1 child} other {{count} children}}
+architecture.page.oversize_list.count={count, plural, one {<bold>1</bold> oversized component} other {<bold>{count}</bold> oversized components}}
+architecture.tangles.subtitle={{containers}} â¢ {{elements}} â¢ in {{container}}
+architecture.tangles.title={{containersCount}} {{containerWord}} and {{elementsCount}} {{elementWord}}{{filename}}
+architecture.tangles.title.filename=inside {{filename}}
+governance.section.sca=Dependency Risks
+issues.facet.detection_cause=Detection cause
+issues.facet.detection_cause.help=New SonarQube issues arise either because of user actions (such as code changes or modification of custom quality profiles) or because of SonarQube updates (such as analyzer/rule improvements or built-in profile adjustments).
+issues.facet.detection_cause.help.aria_label=Detection cause information
+issues.facet.detection_cause.other_causes=All other causes
+issues.facet.detection_cause.sonarqube_update=SonarQube update
+my_account.set_notifications_for.help=Minimum 2 characters
+notification.aicodefix.ga.paid.inactive.admin.message=The Sonar AI CodeFix is now available for this instance. Enable it to receive AI-generated code fix suggestions for some or all of your projects. {link}
+notification.aicodefix.ga.unpaid.active.admin.message=The free early access to AI CodeFix has ended. To continue receiving AI-generated code fix suggestions, upgrade your edition. {link}
+notification.aicodefix.ga.unpaid.active.user.message=The free early access to AI CodeFix has ended â ask your admin about upgrading to continue receiving AI-generated code fix suggestions.
+property.aicodefix.admin.promotion.link=Enable AI Codefix
+property.aicodefix.admin.unpaid.promotion.link=Explore upgrade options
+severity.icon.label=Severity: {severity}
+
+The following translations do not exist in the reference bundle:
+architecture.discovery.spotlight.close=ééç¦é»åè½
+architecture.oversized.description=åå«éå¤å­é ç®çåä»¶ã
+architecture.page.oversized=éå¤§çåä»¶
+issues.code_fix.get_a_fix_suggestion=çæä¿®å¾©å»ºè­°
 
 See report file located at: C:\CodeWorkspace\Java\sonar-l10n-zh-tw\build\l10n\core_zh_Hant.properties.report.txt
 =======================
