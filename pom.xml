@@ -9,7 +9,7 @@
     <groupId>org.sonarqube.l10n.zh-tw</groupId>
     <artifactId>sonar-l10n-zh-tw-plugin</artifactId>
     <packaging>sonar-plugin</packaging>
-    <version>1.2</version>
+    <version>1.9</version>
 
     <name>Traditional Chinese Language Pack</name>
     <url>https://github.com/JE-Chen/sonar-l10n-zh-tw</url>
@@ -35,7 +35,7 @@
         <connection>scm:git:https://github.com/JE-Chen/sonar-l10n-zh-tw.git</connection>
         <developerConnection>scm:git:https://github.com/JE-Chen/sonar-l10n-zh-tw.git</developerConnection>
         <url>https://github.com/JE-Chen/sonar-l10n-zh-tw</url>
-        <tag>sonar-l10n-zh-tw-1.2</tag>
+        <tag>sonar-l10n-zh-tw-1.9</tag>
     </scm>
 
     <issueManagement>
@@ -45,7 +45,7 @@
 
     <properties>
         <sonar.pluginClass>org.sonar.plugins.l10n.TraditionalChinesePackPlugin</sonar.pluginClass>
-        <sonar.version>25.2.0.102705</sonar.version>
+        <sonar.version>25.3.0.104237</sonar.version>
         <sonar-plugin-api.version>9.8.0.203</sonar-plugin-api.version>
         <junit.version>4.13.2</junit.version>
 
@@ -54,8 +54,8 @@
         <sonar.projectKey>Traditional Chinese Language Pack</sonar.projectKey>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
     </properties>
 
     <dependencies>
