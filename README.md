@@ -13,7 +13,7 @@ SonarQube 繁體中文套件(Traditional Chinese Language Pack)
 
 相容列表如下(Compatibility List)：
 
-Compatibility Matrix:
+## Compatibility Matrix:
 
 ### SonarQube 26.x
 | **SonarQube**       | **26.1** |
