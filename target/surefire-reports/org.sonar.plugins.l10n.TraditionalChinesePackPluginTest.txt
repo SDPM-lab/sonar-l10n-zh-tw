@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.sonar.plugins.l10n.TraditionalChinesePackPluginTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.965 s -- in org.sonar.plugins.l10n.TraditionalChinesePackPluginTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.527 s -- in org.sonar.plugins.l10n.TraditionalChinesePackPluginTest
