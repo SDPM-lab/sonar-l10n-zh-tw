@@ -3,73 +3,143 @@
 'core_zh_Hant.properties' is not up-to-date.
 
  Missing translations are:
-architecture.disallowed_dependencies.table.issues=Open issues
-architecture.discovery.rollup.button.off=Low-level
-architecture.discovery.rollup.button.on=High-level
-architecture.misplaced_components.table.issues=Open issues
-architecture.page.dashboard.has_disabled_rules=Some rules can be activated to raise issues on deviations and flaws.
-architecture.page.dashboard.view_disabled_rules=View rules
-architecture.page.deviations.no_data=No deviations found
-architecture.page.model.modal.move_component.disabled_kind=You cannot move a component to {kind}.
-architecture.page.model.modal.move_component.disabled_selected=You cannot move a component to itself.
-architecture.page.model.navigation_guard.leave=Exit without saving
-architecture.page.model.navigation_guard.message=If you leave now, your progress will be lost. Are you sure you want to discard your changes?
-architecture.page.model.navigation_guard.stay=Keep editing
-architecture.page.model.navigation_guard.title=You have unsaved changes
-architecture.page.model.unsaved_changes=You have unsaved changes.
-architecture.page.model.visual.legend=Legend
-architecture.page.model.visual.legend.bullet.1=Classes/files are recursively grouped within their packages/folders/modules
-architecture.page.model.visual.legend.bullet.2=The element's size and position represent the structure of the project (topology)
-architecture.page.model.visual.legend.bullet.3=Elements are ordered left to right according to their relationships
-architecture.page.model.visual.legend.bullet.4=Elements in one column have no relationships among themselves
-architecture.page.model.visual.legend.title=How to read the map
-architecture.tangles.table.classes=Classes
-architecture.tangles.table.empty=No tangles found
-architecture.tangles.table.files=Files
-architecture.tangles.table.folders=Folders
-architecture.tangles.table.location=Location
-architecture.tangles.table.name=Name
-architecture.tangles.table.namespaces=Namespaces
-architecture.tangles.table.packages=Packages
-dependencies.analysis.completed_body=There may be dependency risks in your project that have not yet been detected. Please address the following errors and scan again.
-dependencies.risks.reachability=Reachability
-dependencies.risks.reachable=Reachable
-metric.new_sca_count_any_security.description=Number of dependencies with security risks
-metric.new_sca_count_any_security.name=Dependency security risks
-metric.sca_count_any_security.description=Number of dependencies with security risks
-metric.sca_count_any_security.name=Dependency security risks
-my_account.appearance=Appearance
-my_account.appearance.new_ui.description=Disable this feature to go back to the old layout. We would love to hear <link>your feedback</link> so we can make the experience better for you.
-my_account.appearance.new_ui.switch_label=Enable the new navigation
-my_account.appearance.new_ui.title=New and faster UI
-my_account.appearance.title=Appearance
-onboarding.tutorial.with.azure-pipelines.title=Analyze your project with Azure DevOps Pipelines
-onboarding.tutorial.with.bitbucket-pipelines.title=Analyze your project with Bitbucket CI
-onboarding.tutorial.with.github-actions.title=Analyze your project with GitHub CI
-onboarding.tutorial.with.gitlab-ci.title=Analyze your project with GitLab CI
-permission_templates.no_results=No permission templates found matching "{query}"
-permission_templates.no_templates=No permission templates have been created yet.
-permission_templates.search_aria_label=Search permission templates
-permission_templates.search_placeholder=Search for templates...
-portfolio_overview.description=A summary of information from the project branches that was chosen for this portfolio. To learn more about how portfolio ratings are calculated, see {link}.
-portfolio_overview.description.link=managing portfolios documentation
-project_quality_profiles.page=Quality profiles
-projects_role.template_name=Template Name
-promotion.new_navigation.content=You're now beta testing our new UI. You can switch back and/or leave feedback in My account > Appearance.
-promotion.new_navigation.go_to_appearance=Go to Appearance
-promotion.new_navigation.got_it=Got it
-promotion.new_navigation.illustration_alt=New sidebar navigation preview
-promotion.new_navigation.title=Introducing new, faster UI
-promotion.sqide.content=Take advantage of the whole ecosystem by using SonarQube for IDE, a free IDE plugin that helps you find and fix issues earlier in your workflow. Connect SonarQube for IDE to {productName} to sync rule sets and issue states.
-promotion.sqide.title=Get the most out of {productName}!
-sca.quality_gates.metric.sca_severity_any_security=Dependency security risk severity
-sca.quality_gates.metric.sca_severity_malware.description=All malicious code risks are classified as blocker severity by Sonar.
-system.logs.access=Access Logs
-system.logs.app=Main Process
-system.logs.ce=Compute Engine
-system.logs.deprecation=Deprecation Logs
-system.logs.es=Search Engine
-system.logs.web=Web Server
+aicodefix.admin.custom_headers.add=Add custom header
+aicodefix.admin.custom_headers.delete=Remove header {name}
+aicodefix.admin.custom_headers.header_name=Header name
+aicodefix.admin.custom_headers.header_value=Value
+aicodefix.admin.custom_headers.secret=Secret
+aicodefix.admin.provider.custom.help=Any OpenAI-compatible model
+aicodefix.admin.provider.other_providers=Other providers
+aicodefix.admin.provider.secret.placeholder=Value is hidden, type a new key to update
+architecture.page.dashboard.resources_link=What is architecture in SonarQube and how to use it?
+architecture.page.discovery.copy_component_path_to_clipboard=Copy the component path to the clipboard
+architecture.page.model.edit.hint=Drag a component to another to define a relationship. Any missing relationship is considered forbidden.
+architecture.page.model.edit.orphan_warning.description=Some components have no relationships defined:
+architecture.page.model.edit.orphan_warning.save=Save anyway
+architecture.page.model.edit.orphan_warning.stay=Continue editing
+architecture.page.model.edit.orphan_warning.title=Warning
+architecture.page.model.edit.title=Edit mode
+architecture.page.model.errors.group.name_conflicts_with_artifact=A component name cannot be the same as an existing artifact's name.
+architecture.page.model.errors.group.name_must_be_alphanumeric=A component name can only contain alphanumeric characters and dashes.
+architecture.page.model.intended.how_it_works=How it works
+architecture.page.model.intended.legend.bullet.1=Only added components (and their sub-components) are verified
+architecture.page.model.intended.legend.bullet.2=Relations defined means they are allowed
+architecture.page.model.intended.legend.bullet.3=Relations not defined means they are not allowed
+architecture.page.model.intended.legend.bullet.4=Relations can only be defined between sibling components
+architecture.page.model.intended.legend.bullet.5=Relations are inherited by children
+architecture.page.model.intended.legend.description=Add the components that are the most important, generally the top ones (no need to go deep) for your application, and define their relationship. SonarQube will continuously verify them. Here is how it works:
+architecture.page.model.modal.delete_component.cancel_button=Cancel
+architecture.page.model.modal.delete_component.confirm=Are you sure?
+architecture.page.model.modal.delete_component.delete_button=Delete and save
+architecture.page.model.modal.delete_component.title=Delete component
+architecture.page.model.no_architecture_available=This project doesn't have an intended architecture defined. Architecture administrators are able to create it.
+architecture.page.model.spotlight.add_placeholder.kind_placeholder=<kind>
+architecture.page.model.spotlight.add_placeholder.label=Add placeholder component
+architecture.page.model.spotlight.add_placeholder.name_placeholder=<name>
+architecture.page.model.spotlight.component_structure=Component structure
+architecture.page.model.spotlight.enable_interfaces=Enable interfaces
+architecture.page.model.spotlight.interface_design=Interface Design
+architecture.search.more=Top results shown. Refine for more.
+architecture.search.x_found={count} found
+coding_rules.deactivate_inherited_rules_disabled=Deactivation of inherited rules is disabled by an administrative setting (sonar.qualityProfiles.allowDisableInheritedRules)
+dependencies.analysis.show_unfiltered_items=Show all risks
+dependencies.properties.newly_introduced.releases=New dependencies
+dependencies.properties.newly_introduced.risks=Risks in new dependencies
+dependencies.risk.how.withdrawn=This advisory has been withdrawn by the source as the report was found to be invalid. Sonar shows this record for transparency, but no patch or remediation is needed.
+dependencies.risks.reachability.more_locations=Show additional files ({count})
+dependencies.risks.reachability.snippet_message=Your code directly calls this vulnerable function, making this risk reachable.
+dependencies.risks.reachability.title=This vulnerability is reachable
+external-product-connection.connection-error.description=The following token was created:
+external-product-connection.connection-error.next-steps=Next steps
+external-product-connection.connection-error.step1=Copy the above token.
+external-product-connection.connection-error.step2=Go back to your {productHost} and paste the token.
+external-product-connection.connection-error.title=Token created
+external-product-connection.connection-error.token-name=Token name
+external-product-connection.connection-error.token-value=Token value
+external-product-connection.request.action=Allow connection
+external-product-connection.request.description=Allowing this connection will generate a user token for {productName}.
+external-product-connection.request.title=Authorize {productName}?
+external-product-connection.success.description=Your user token has now been generated & sent to your {productHost}.
+external-product-connection.success.next=Return to your {productHost} to complete the setup.
+external-product-connection.success.title=Connection successful!
+external-product-connection.token-error.description={productName} was not able to generate a token.
+external-product-connection.token-error.description2=Go back to your {productHost} and start again, or go to the {link} of your {productName} account to create a new user token manually.
+external-product-connection.token-error.description2.link=Security section
+external-product-connection.token-error.title=Token generation failed
+external-product-connection.unspecified-ide=an unspecified IDE
+governance_report.page=Executive report
+lines_of_code_ellipsis.show_all_lines=Show all lines
+lines_of_code_ellipsis.show_more_lines=Show more lines
+lines_of_code_ellipsis.show_x_lines=Show {count} lines
+portfolios.exclude_sub_portfolios=Exclude sub-portfolios
+property.sonar.issues.issueResolution.enabled.description.project=Enable usage of in-code issue resolution with SONAR-RESOLVE for this project. <docLink>Read more about in-code issue resolution.</docLink>
+property.sonar.issues.issueResolution.enabled.disabled_reason=This setting is disabled at the instance level
+property.sonar.issues.issueResolution.enabled.name.project=Enable in-code issue resolution
+property.sonar.issues.issueResolution.global.enabled.description=Enable usage of in-code issue resolution with SONAR-RESOLVE across projects. Disabling this setting will prevent usage of SONAR-RESOLVE on all projects. <docLink>Read more about in-code issue resolution.</docLink>
+quality_profile.summary_differences_additional_only=Compared to {comparedProfile} profile, {profile} includes {additional}.
+quality_profile.summary_differences_fewer_only=Compared to {comparedProfile} profile, {profile} is missing {fewer}.
+sca.dependencies.key_changes.fixed.has_risks=This pull request would eliminate {count} existing dependency risks from the default branch.
+sca.dependencies.key_changes.fixed.label={count} Fixed Risks
+sca.dependencies.key_changes.fixed.no_risks=This pull request does not fix any dependency risks.
+sca.dependencies.key_changes.fixed.read_only=This list is read-only. For more details see {link}.
+sca.dependencies.key_changes.heading=Key changes for {branchName}
+sca.dependencies.key_changes.newly_introduced.has_risks=This pull request would create {count} new dependency risks in the default branch.
+sca.dependencies.key_changes.newly_introduced.label={count} Newly Introduced Risks
+sca.dependencies.key_changes.newly_introduced.no_risks=This pull request does not create any new dependency risks.
+sca.dependencies.key_changes.no_changes=This pull request does not create or fix any dependency risks.
+sca.dependencies.key_changes.selection_cards.aria_label=Select risk category to view
+sca.licenses.profile.filter_by_policy=All policies
+source_viewer.loading_more_lines=Loading more lines...
+vex=VEX
 
-See report file located at: C:\CodeWorkspace\Java\sonar-l10n-zh-tw\build\l10n\core_zh_Hant.properties.report.txt
+The following translations do not exist in the reference bundle:
+aicodefix.admin.provider.self_hosted=èªè¨ç®¡
+aicodefix.azure_open_ai.apiKey.update_placeholder=å¼å·²é±èï¼è«è¼¸å¥æ°å¯é°é²è¡æ´æ°
+architecture.page.model.errors.group.name_cannot_contain_slash=åä»¶åç¨±ä¸å¯åå«æç·ã
+architecture.page.model.modal.add_placeholder.kind_of_component=åä»¶é¡å
+architecture.page.model.modal.add_placeholder.new_name=åç¨±
+architecture.page.model.modal.add_placeholder.title=æ°å¢ä½ä½ç¬¦
+coding_rules.can_not_deactivate=éæ¢æ¯ç¹¼æ¿çè¦åï¼ä¸è½å¿½ç¥ã
+dependencies.list.new_code_show=é¡¯ç¤º
+dependencies.properties.newly_introduced=åé¡¯ç¤ºæ°å¢çç¸ä¾æ§
+dependencies.properties.newly_introduced.inverse=ææç¸ä¾æ§
+property.aicodefix.admin.serviceInfo.empty.response.label=AI CodeFix æåå³åä¸åç©ºé¿æãè«åç¶­è­·äººå¡åå ±æ­¤åé¡ã
+property.aicodefix.admin.serviceInfo.learnMore=ä»¥äºè§£æéåç¨ AI CodeFix çæ´å¤ä¿¡æ¯
+property.aicodefix.admin.serviceInfo.result.error.retry.action=åè©¦
+property.aicodefix.admin.serviceInfo.result.error.retry.get_help=åå¾åå©
+property.aicodefix.admin.serviceInfo.result.error.retry.message=å¦æåé¡ä»ç¶å­å¨ï¼è«ç¨å¾åè©¦æ{ link }
+property.aicodefix.admin.serviceInfo.result.error.title=AI CodeFix é¯èª¤
+property.aicodefix.admin.serviceInfo.result.requestError=æª¢æ¥ AI CodeFix æåæç¼çé¯èª¤ï¼
+property.aicodefix.admin.serviceInfo.result.serviceError=AI CodeFix æåå¯å­åä½åå³é¯èª¤ãæª¢æ¥æ¥èªä»¥äºè§£æ´å¤è©³ç´°è³è¨ã
+property.aicodefix.admin.serviceInfo.result.unauthorized=æ­¤ SonarQube å¯¦ä¾ä¸åè¨±ä½¿ç¨ AI CodeFixã
+property.aicodefix.admin.serviceInfo.result.unknown=AI CodeFix æååå³äºæå¤è¨æ¯ï¼
+property.aicodefix.admin.serviceInfo.result.unresponsive.causes.1=æ­¤ SonarQube å¯¦ä¾ä¸çç¶²è·¯å¯è½æªæ­£ç¢ºéç½®ãè«æª¢æ¥é²ç«çåé£ç·è¨­å®ã
+property.aicodefix.admin.serviceInfo.result.unresponsive.causes.2=AI CodeFix æåå¯è½å·²ééã
+property.aicodefix.admin.serviceInfo.result.unresponsive.causes.title=ä»¥ä¸æ¯å°è´æ­¤é¯èª¤çä¸äºå¯è½åå ï¼
+property.aicodefix.admin.serviceInfo.result.unresponsive.message=AI CodeFix æåæ²æåææç¡æ³å­åã
+property.aicodefix.admin.serviceInfo.spinner.label=ç­å¾ AI CodeFix æååæ...
+property.aicodefix.admin.serviceInfo.unexpected.response.label=AI CodeFix æååå³äºæå¤åæãæ¨å¯è½éè¦åç´æ¨çå¯¦ä¾ã
+quality_profile.summary_differences2={profile} å°æ {difference} å°æ¯ {comparedProfile}
+sonarlint-connection.connection-error.description=ä»¤çå·²åµå»ºï¼
+sonarlint-connection.connection-error.next-steps=ä¸ä¸æ­¥
+sonarlint-connection.connection-error.step1=è¤è£½ä¸è¿°ä»¤çã
+sonarlint-connection.connection-error.step2=è¿å IDEï¼æä»¤çé»è²¼é² SonarLintã
+sonarlint-connection.connection-error.title=ä»¤çåµå»ºæå
+sonarlint-connection.connection-error.token-name=ä»¤çåç¨±
+sonarlint-connection.connection-error.token-value=ä»¤çå¼
+sonarlint-connection.request.action=åè¨±é£æ¥
+sonarlint-connection.request.description={0} SonarLint è«æ±è¨ªå SonarQube.
+sonarlint-connection.request.description2=æ¯å¦åè¨± SonarLint é£æ¥?å°åµå»ºä¸åä»¤çä¸¦åäº«ç» SonarLintã
+sonarlint-connection.request.title=åè¨± SonarLint é£æ¥?
+sonarlint-connection.success.description=æ°ä»¤ç '{0}' å·²åµå»ºï¼ä¸¦ç¼éç» IDE ä¸­ç SonarLintã
+sonarlint-connection.success.last-step=æå¾ä¸æ­¥
+sonarlint-connection.success.step=è¿å IDE å®æè¨­ç½®ã
+sonarlint-connection.success.title=SonarLint é£æ¥å³å°æå!
+sonarlint-connection.token-error.description=SonarQube ç¡æ³åµå»ºä»¤ç
+sonarlint-connection.token-error.description2=è¿å IDE éè©¦ï¼æè¨ªå SonarQube {link} æå·¥åµå»ºæ°ç¨æ¶ä»¤çã
+sonarlint-connection.token-error.description2.link=å®å¨ä»¤ç
+sonarlint-connection.token-error.title=ä»¤çåµå»ºå¤±æ
+sonarlint-connection.unspecified-ide=æªæå® IDE
+
+See report file located at: D:\Codes\sonar-l10n-zh-tw\build\l10n\core_zh_Hant.properties.report.txt
 =======================
