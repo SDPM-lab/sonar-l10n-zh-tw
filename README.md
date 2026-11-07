@@ -3,7 +3,7 @@ The Traditional Chinese Language Pack for SonarQube
 
 Author: JeffreyChen <jechenmailman@gmail.com>
 
-Latest version: https://github.com/SDPM-lab/sonar-l10n-zh-tw/releases/tag/1.9
+Latest version: https://github.com/SDPM-lab/sonar-l10n-zh-tw/releases/latest
 
 Sonarcloud: https://sonarcloud.io/project/overview?id=JE-Chen_sonar-l10n-zh-tw
 
@@ -17,9 +17,9 @@ SonarQube 繁體中文套件(Traditional Chinese Language Pack)
 
 ### SonarQube 26.x
 
-| **SonarQube**       | **26.1** | **26.2** | **26.3** | **26.4** |
-|---------------------|----------|----------|----------|----------|
-| **sonar-l10n-zhtw** | **1.9**  | **26.2** | **26.3** | **26.4** |
+| **SonarQube**       | **26.1** | **26.2** | **26.3** | **26.4** | **26.5** | **26.6** | **26.7** | **26.8** | **26.9** | **26.10** | **26.11** |
+|---------------------|----------|----------|----------|----------|----------|----------|----------|----------|----------|-----------|-----------|
+| **sonar-l10n-zhtw** | **1.9**  | **26.2** | **26.3** | **26.4** | **26.5** | **26.6** | **26.7** | **26.8** | **26.9** | **26.10** | **26.11** |
 
 ### SonarQube 25.x
 
